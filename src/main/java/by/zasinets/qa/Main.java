@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        try {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Пожаллуйста введите radius, для нахождения площади круга по формуле (S = π × radius × radius ): ");
         double radius = scanner.nextInt();
@@ -30,6 +30,8 @@ public class Main {
         String colorTriangle = triangle.getColor();
         System.out.println("\u001B[34m" + "Треугольник:" + colorTriangle);
         System.out.println("\u001B[34m" + "Плащадь (S = (width × height)/2 ) треугольника = " + triangle.calculateArea());
-
+        } catch (Exception e) {
+            System.out.println( "\u001B[36m"+ "Некорректно введено значение геометрических фигур! Попробуйте еще раз!");
+        }
     }
 }
